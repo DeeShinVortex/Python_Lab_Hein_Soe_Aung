@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --muted: #6b7280;
+  --accent: #2563eb;
+}
+
+body.dark {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+  z-index: 100;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+nav a.active {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+nav button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+}
+
+/* Layout */
+main {
+  max-width: 960px;
+  margin: auto;
+  padding: 40px 16px;
+}
+
+/* Header */
+header {
+  margin-bottom: 64px;
+}
+
+header h1 {
+  font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+header span {
+  color: var(--accent);
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.resume-btn:hover {
+  background: var(--accent);
+  color: white;
+}
+
+
+/* Sections */
+section {
+  margin-bottom: 56px;
+}
+
+section h2 {
+  margin-bottom: 14px;
+}
+
+/* Skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+
+/* Projects */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+/* Contact */
+.contact a {
+  display: block;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 6px;
+}
+
+/* Fade animation */
+.fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  margin-top: 80px;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+/* Skill Colors */
+.html { background: #fff4e6; color: #e34c26; border-color: #ffd8c2; }
+.css { background: #e0f2fe; color: #2563eb; border-color: #bae6fd; }
+.js { background: #fef9c3; color: #ca8a04; border-color: #fde68a; }
+.python { background: #eef2ff; color: #4338ca; border-color: #c7d2fe; }
+.java { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }
+.git { background: #f0fdf4; color: #15803d; border-color: #bbf7d0; }
+.tools { background: #f8fafc; color: #475569; border-color: #e2e8f0; }
+.design { background: #fdf2f8; color: #be185d; border-color: #fbcfe8; }
+
+/* Dark mode skill polish */
+body.dark .html {
+  background: rgba(227, 76, 38, 0.15);
+  color: #f97316;
+  border-color: rgba(227, 76, 38, 0.35);
+}
+
+body.dark .css {
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+body.dark .js {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border-color: rgba(234, 179, 8, 0.35);
+}
+
+body.dark .python {
+  background: rgba(67, 56, 202, 0.15);
+  color: #a5b4fc;
+  border-color: rgba(67, 56, 202, 0.35);
+}
+
+body.dark .java {
+  background: rgba(185, 28, 28, 0.15);
+  color: #fca5a5;
+  border-color: rgba(185, 28, 28, 0.35);
+}
+
+body.dark .git {
+  background: rgba(21, 128, 61, 0.15);
+  color: #86efac;
+  border-color: rgba(21, 128, 61, 0.35);
+}
+
+body.dark .tools {
+  background: rgba(148, 163, 184, 0.1);
+  color: #cbd5f5;
+  border-color: rgba(148, 163, 184, 0.25);
+}
+
+body.dark .design {
+  background: rgba(190, 24, 93, 0.15);
+  color: #f9a8d4;
+  border-color: rgba(190, 24, 93, 0.35);
+}
+/* Skill hover */
+.skill {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Project card hover */
+.project {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Navbar link hover */
+nav a {
+  transition: color 0.2s ease;
+}
